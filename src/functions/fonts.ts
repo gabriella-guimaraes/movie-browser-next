@@ -1,0 +1,15 @@
+import { Inter, Gelasio } from 'next/font/google';
+
+export const type_main = Inter({
+  weight: ['500'],
+  subsets: ['latin'],
+  variable: '--type-main-inter',
+  display: 'swap',
+});
+
+export const type_second = Gelasio({
+  weight: ['500'],
+  subsets: ['latin'],
+  variable: '--type-second-gelasio',
+  display: 'swap',
+});
