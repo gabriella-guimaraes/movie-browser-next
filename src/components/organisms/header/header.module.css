@@ -6,6 +6,7 @@
   background: var(--bg-dark);
   top: 0px;
   padding: 0rem 10rem;
+  border-bottom: 1px solid var(--text-light);
 }
 
 .nav {
@@ -29,19 +30,8 @@
   color: var(--text-light);
 }
 
-/* .login {
-  color: #333;
-  display: flex;
-  align-items: center;
+@media (min-width: 1500px) {
+  .header {
+    padding: 0rem 15rem;
+  }
 }
-
-.login::after {
-  content: '';
-  display: inline-block;
-  width: 14px;
-  height: 17px;
-  background: url('/assets/usuario.svg') no-repeat center center;
-  margin-left: 0.5rem;
-  position: relative;
-  top: -1px;
-} */

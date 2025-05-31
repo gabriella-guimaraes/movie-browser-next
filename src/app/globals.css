@@ -81,3 +81,22 @@ a {
 .Content {
   padding: 0rem 10rem;
 }
+
+.BannerTitle {
+  font-size: 48px;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.SubTitle {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 22px;
+}
+
+@media (min-width: 1500px) {
+  .Content {
+    padding: 0rem 15rem;
+  }
+}
