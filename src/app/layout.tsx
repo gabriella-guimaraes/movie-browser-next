@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
+
+//Styles
 import { type_main } from "@/functions/fonts";
 import "./globals.css";
+
+//Components
 import Header from "@/components/organisms/header/header";
+import { SearchProvider } from "@/context/search-context";
+
+//Contexts
 
 export const metadata: Metadata = {
   title: "Movie Browser",
@@ -19,12 +26,14 @@ export default function RootLayout({
         <link rel="icon" href="/assets/icon.svg" />
       </head>
       <body className={type_main.variable}>
-        <div className="App">
-          <Header />
-          <main className="AppBody">
-            {children}
-          </main>
-        </div>
+        <SearchProvider>
+          <div className="App">
+            <Header />
+            <main className="AppBody">
+              {children}
+            </main>
+          </div>
+        </SearchProvider>
       </body>
     </html>
   );

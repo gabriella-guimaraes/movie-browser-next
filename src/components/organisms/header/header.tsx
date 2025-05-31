@@ -1,15 +1,11 @@
-"use client"
-
 import Link from 'next/link';
 import Image from 'next/image';
 
 //Styles
 import styles from './header.module.css';
-import { IconButton, TextField, ThemeProvider } from '@mui/material';
 
-//External
-import SearchIcon from '@mui/icons-material/Search';
-import theme from '@/app/theme';
+//Components
+import SearchInput from './../../molecules/search-input/search-input';
 
 export default function Header() {
     return(
@@ -35,17 +31,7 @@ export default function Header() {
                     </Link>
                     
                     {/* Input de pesquisa */}
-                    <div>
-                        <ThemeProvider theme={theme}>
-                            <form action="submit">
-                                <TextField id="movie-search" label="Search" variant="outlined" size="small" color='secondary' />
-
-                                <IconButton aria-label="search">
-                                    <SearchIcon />
-                                </IconButton>
-                            </form>
-                        </ThemeProvider>
-                    </div>
+                    <SearchInput />
                 </div>
 
             </nav>
