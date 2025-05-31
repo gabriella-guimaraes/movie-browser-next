@@ -3,7 +3,7 @@ export const API_URL = "https://api.themoviedb.org/3";
 const token = process.env.NEXT_PUBLIC_API_KEY;
 
 if (!token) {
-  throw new Error('📛 A variável de ambiente API_KEY não está definida.');
+  console.error('📛 A variável de ambiente API_KEY não está definida.');
 }
 
 const options: RequestInit = {
