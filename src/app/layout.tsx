@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { type_main } from "@/functions/fonts";
 import "./globals.css";
+import Header from "@/components/organisms/header/header";
 
 export const metadata: Metadata = {
   title: "Movie Browser",
@@ -15,10 +16,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/images/icon.svg" />
+        <link rel="icon" href="/assets/icon.svg" />
       </head>
       <body className={type_main.variable}>
-        {children}
+        <div className="App">
+          <Header />
+          <main className="AppBody">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
