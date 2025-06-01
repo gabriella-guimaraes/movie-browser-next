@@ -1,0 +1,63 @@
+.CardCarousel {
+    padding-left: 10rem;
+}
+
+.container {
+    margin-top: 50px;
+    padding-left: 10rem;
+}
+
+.slider {
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    padding-left: 10rem;
+}
+
+.slider::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+.slideTrack {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform ease 1.5s;
+}
+
+.slideTrack > div {
+    flex: 0 0 auto;
+    margin-right: 16px;
+}
+
+.firstCard {
+    margin-left: 5.5rem;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 4.5rem;
+    }
+
+    .firstCard {
+        margin-left: 4.5rem;
+    }
+
+}
+
+@media (max-width: 748px) {
+    .container {
+      padding: 0rem 1.5rem;
+    }
+
+    .firstCard {
+        margin-left: 1.5rem;
+    }
+}
+
+@media (min-width: 1500px) {
+  .slider, .container {
+    padding-left: 15rem;
+  }
+}
