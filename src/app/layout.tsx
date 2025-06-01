@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 //Styles
-import { type_main } from "@/functions/fonts";
+import { type_main, type_second } from "@/functions/fonts";
 import "./globals.css";
 
 //Components
@@ -25,7 +25,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/assets/icon.svg" />
       </head>
-      <body className={type_main.variable}>
+      <body className={`${type_main.variable} ${type_second.variable}`}>
         <SearchProvider>
           <div className="App">
             <Header />

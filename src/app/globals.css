@@ -89,6 +89,10 @@ a:hover {
   line-height: 22px;
 }
 
+.SecondTitle {
+  font-family: var(--type-second);
+}
+
 /* Animações */
 
 .animeLeft {

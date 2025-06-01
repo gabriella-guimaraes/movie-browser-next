@@ -7,7 +7,6 @@ export const type_main = Inter({
 });
 
 export const type_second = Gelasio({
-  weight: ['500'],
   subsets: ['latin'],
   variable: '--type-second-gelasio',
   display: 'swap',

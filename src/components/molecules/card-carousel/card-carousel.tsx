@@ -9,6 +9,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 //Components
+import MovieCard from "../card/movie-card";
 
 //Models
 import { Movie } from "@/types/movie.model";
@@ -16,7 +17,6 @@ import { Movie } from "@/types/movie.model";
 //External
 import React, { useState, useEffect } from "react";
 import { fetchPopularMovies } from "@/functions/api";
-import Card from "../card/card";
 
 export default function CardCarousel() {
   const [index, setIndex] = useState(0);
@@ -84,7 +84,7 @@ export default function CardCarousel() {
         >
           {movies.map((movie, idx) => (
             <div key={idx} className={idx === 0 ? styles.firstCard : ""}>
-              <Card movie={movie} />
+              <MovieCard movie={movie} />
             </div>
           ))}
         </div>

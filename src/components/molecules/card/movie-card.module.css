@@ -1,0 +1,42 @@
+.CardBody {
+    flex-basis: 31%;
+    position: relative;
+}
+
+.CardBody:hover .CardDesc {
+    opacity: 1;
+    padding-top: 0;
+}
+
+.CardTitle {
+    font-family: var(--type-second);
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 12px;
+    text-align: center;
+    padding: 0rem 1rem;
+}
+
+.CardDesc {
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(24, 24, 24, 0.788);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--bg-primary);
+    cursor: pointer;
+    opacity: 0;
+    padding-top: 70%;
+    transition: 0.5s;
+}
+
+.CardDesc img {
+    width: 60px;
+    margin-bottom: 10px;
+}
