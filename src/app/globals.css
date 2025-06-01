@@ -42,7 +42,13 @@ img {
 
 a {
   text-decoration: none;
+  color: var(--text-light);
+}
+
+a:hover {
   color: var(--blue);
+  transform: scale(1.05);
+  transition: 0.5s;
 }
 
 .container {

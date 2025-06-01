@@ -1,10 +1,11 @@
 import Hero from "@/components/molecules/hero/hero"
+import Trending from "@/components/organisms/trending/trending";
 
 export default function Home() {
   return (
     <section>
       <Hero />
-      <h1>Hello There</h1>
+      <Trending />
     </section>
   );
 }
