@@ -1,0 +1,25 @@
+.SectionTitleGradient {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.SectionTitleGradient h1 {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    background: linear-gradient(120deg, #92202A, #C8743C);
+    background-clip: text;
+    -webkit-background-clip: text; /* Clipa o background no texto (necessário para webkit browsers) */
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Garante que o texto seja transparente */
+}
+
+.Divider {
+    width: 60%;
+    height: 3px;
+    background-color: var(--text-light);
+    opacity: 0.5;
+}
