@@ -3,6 +3,8 @@
 //Styles
 import styles from "./card-carousel.module.css";
 import { Grid, IconButton } from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 //Icons
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -23,6 +25,7 @@ export default function CardCarousel() {
   const [transform, setTransform] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(1);
   const [movies, setMovies] = useState<Movie[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
   // Atualiza quantos cards cabem na tela conforme largura da janela
   const updateCardsPerView = () => {
@@ -45,10 +48,13 @@ export default function CardCarousel() {
     // Chama a função fetchPopularMovies para buscar a lista de filmes
     const loadMovies = async () => {
       try {
+        setLoading(true);
         const response = await fetchPopularMovies();
         setMovies(response);
       } catch (err) {
         console.error("Erro ao carregar filmes populares:", err);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -74,6 +80,23 @@ export default function CardCarousel() {
       setTransform((prev) => prev + 390);
     }
   };
+
+  if (loading) {
+    return (
+      <Box
+        className={styles.loadingContainer}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "300px", // ou a altura que fizer sentido para a sua UI
+        }}
+      >
+        <CircularProgress />
+      </Box>
+    );
+  }
+
   return (
     <div>
 
