@@ -1,4 +1,5 @@
 import Hero from "@/components/molecules/hero/hero"
+import Explore from "@/components/organisms/explore/explore";
 import Trending from "@/components/organisms/trending/trending";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <section>
       <Hero />
       <Trending />
+      <Explore />
     </section>
   );
 }
