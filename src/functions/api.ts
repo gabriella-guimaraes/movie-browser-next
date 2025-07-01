@@ -27,6 +27,19 @@ export async function fetchPopularMovies(pages = 5) {
     }
 }
 
+export async function fetchCriticsChoice() {
+  try {
+      const response = await fetch(`${API_URL}/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=vote_average.desc`, options);
+      const data = await response.json();
+
+      return data.results;
+  }
+  catch(error) {
+    console.log("Error ao obter filmes bem avaliados:", error);
+    throw error;
+  }
+}
+
 export async function fetchMovies(searchText: string) {
   try {
     const response = await fetch(`${API_URL}/search/movie?language=en-US&query=${searchText}&page=1&include_adult=false`, options);

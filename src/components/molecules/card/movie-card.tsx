@@ -29,7 +29,7 @@ export default function MovieCard({ movie }: CardProps) {
     return(
         <section className={styles.MovieCard}>
           <ThemeProvider theme={theme}>
-            <Card sx={{ maxWidth: 350, minHeight: 350 }}>
+            <Card sx={{ maxWidth: 250, minHeight: 350, maxHeight: 350 }}>
               <CardActionArea>
                 <div className={styles.CardBody}>
                   {poster()}
