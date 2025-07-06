@@ -89,7 +89,7 @@ export default function CardCarousel() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "300px", // ou a altura que fizer sentido para a sua UI
+          height: "300px",
         }}
       >
         <CircularProgress />

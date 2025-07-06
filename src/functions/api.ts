@@ -52,3 +52,16 @@ export async function fetchMovies(searchText: string) {
     throw error;
   }
 }
+
+export async function fetchMovieDetails(movieId: number) {
+  try {
+    const response = await fetch(`${API_URL}/movie/${movieId}?language=en-US`, options);
+    const data = await response.json();
+
+    return data;
+
+  } catch (error) {
+    console.log("Error ao obter filmes:", error);
+    throw error;
+  }
+}
