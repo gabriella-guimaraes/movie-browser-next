@@ -15,14 +15,14 @@ interface CardProps {
 
 export default function MovieCard({ movie }: CardProps) {
     const posterUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-    const detailUrl = `/movies/${movie.id}`
+    const detailUrl = `/movie/${movie.id}`
 
     function poster () {
       if(movie.poster_path){
         return <Image src={posterUrl} className="card-img-top" alt={movie.original_title} width={250} height={350} />
       }
       if(movie.poster_path == null){
-        return <Image src="./Images/no-poster-found.png" className="card-img-top" alt="Poster not found" />
+        return <Image src="/assets/no-poster-found.png" className="card-img-top" alt="Poster not found" width={250} height={350} />
       }
     }
 
