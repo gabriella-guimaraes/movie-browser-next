@@ -16,6 +16,7 @@ import type { Movie } from "@/types/movie.model";
 
 // Components
 import MovieBanner from "@/components/atoms/movie-banner/movie-banner";
+import MovieInfo from "@/components/organisms/movie-info/movie-info";
 
 export default function Movie() {
   const { id } = useParams();
@@ -62,11 +63,11 @@ export default function Movie() {
     const backdropUrl = `https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`;
     
     return (
-      <div>
+      <section className={styles.MovieDetails}>
         <MovieBanner backdrop_path={backdropUrl} />
-        <h1>Movie details</h1>
-        <p>{movieDetails?.original_title}</p>
-      </div>
+        <section className={styles.TransitionBg}></section>
+          <MovieInfo movie={movieDetails} />
+      </section>
     );
   }
 }
