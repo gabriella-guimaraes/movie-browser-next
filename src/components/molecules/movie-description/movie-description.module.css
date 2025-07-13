@@ -4,4 +4,21 @@
 
 .MovieOverview {
     padding: 3rem 0rem;
+    font-size: 14px;
+}
+
+.MovieTagline {
+    padding: 3rem 0rem;
+    font-style: italic;
+    text-align: end;
+}
+
+.Quote {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.Title {
+    font-weight: 300;
+    font-size: 14px;
 }

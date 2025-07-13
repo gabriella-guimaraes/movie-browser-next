@@ -19,9 +19,11 @@ interface MovieDescriptionProps {
     movieId: number;
     releaseYear?: string;
     overview?: string;
+    tagline?: string;
+    title?: string;
 }
 
-export default function MovieDescription({ movieId, releaseYear, overview }: MovieDescriptionProps) {
+export default function MovieDescription({ movieId, releaseYear, overview, tagline, title }: MovieDescriptionProps) {
     const [movieCredits, setMovieCredits] = useState<Credits | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
 
@@ -74,6 +76,11 @@ export default function MovieDescription({ movieId, releaseYear, overview }: Mov
 
       <div className={styles.MovieOverview}>
         <p>{overview}</p>
+      </div>
+
+      <div className={styles.MovieTagline}>
+        <p className={styles.Quote}>&quot;{tagline}&quot;</p>
+        <p className={styles.Title}>- {title}</p>
       </div>
     </section>
   );
