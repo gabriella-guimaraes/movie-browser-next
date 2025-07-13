@@ -65,3 +65,16 @@ export async function fetchMovieDetails(movieId: number) {
     throw error;
   }
 }
+
+export async function fetchMovieCredits(movieId: number) {
+  try {
+    const response = await fetch(`${API_URL}/movie/${movieId}/credits?language=en-US`, options);
+    const data = await response.json();
+
+    return data;
+
+  } catch (error) {
+    console.log("Error ao obter créditos do filme:", error);
+    throw error;
+  }
+}

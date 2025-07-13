@@ -14,7 +14,7 @@ export default function MovieBanner({ backdrop_path }: MovieBannerProps) {
                 className={styles.backdrop}
                 style={{ backgroundImage: `url(${backdrop_path})` }}
               ></div> */}
-            <Image src={backdrop_path} alt="movie banner" width={1000} height={200} className={styles.bannerImg} />
+            <Image src={backdrop_path} alt="movie banner" width={1080} height={200} className={styles.bannerImg} />
         </section>
     );
 }

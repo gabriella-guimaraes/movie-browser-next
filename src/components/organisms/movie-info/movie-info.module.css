@@ -7,6 +7,12 @@
     margin-top: -20vh;
 }
 
+.MovieTitle {
+  font-family: var(--type-second);
+  font-size: 40px;
+  font-weight: 600;
+}
+
 @media (min-width: 1500px) {
   .MovieInfo {
     padding: 8rem 15rem;
