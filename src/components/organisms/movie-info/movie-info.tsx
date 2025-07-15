@@ -31,7 +31,7 @@ export default function MovieInfo({ movie }: MovieInfoProps) {
             <Grid size={{ xs: 12, sm: 7, md: 8 }}>
               <h1 className={styles.MovieTitle}>{movie.original_title}</h1>
               
-              <MovieDescription movieId={movie.id} releaseYear={releaseYear} overview={movie.overview} tagline={movie.tagline} title={movie.original_title}/>
+              <MovieDescription movieId={movie.id} releaseYear={releaseYear} overview={movie.overview} tagline={movie.tagline} title={movie.original_title} rating={movie.vote_average} totalVotes={movie.vote_count} />
             </Grid>
         </Grid>
     </section>

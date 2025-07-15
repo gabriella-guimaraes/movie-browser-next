@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 
 // Components
 import { Box, CircularProgress } from "@mui/material";
+import MovieRating from "@/components/atoms/movie-rating/movie-rating";
 
 interface MovieDescriptionProps {
     movieId: number;
@@ -21,9 +22,11 @@ interface MovieDescriptionProps {
     overview?: string;
     tagline?: string;
     title?: string;
+    rating: number;
+    totalVotes: number;
 }
 
-export default function MovieDescription({ movieId, releaseYear, overview, tagline, title }: MovieDescriptionProps) {
+export default function MovieDescription({ movieId, releaseYear, overview, tagline, title, rating, totalVotes }: MovieDescriptionProps) {
     const [movieCredits, setMovieCredits] = useState<Credits | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
 
@@ -81,6 +84,10 @@ export default function MovieDescription({ movieId, releaseYear, overview, tagli
       <div className={styles.MovieTagline}>
         <p className={styles.Quote}>&quot;{tagline}&quot;</p>
         <p className={styles.Title}>- {title}</p>
+      </div>
+
+      <div className={styles.MovieRating}>
+        <MovieRating rating={rating} totalVotes={totalVotes} />
       </div>
     </section>
   );

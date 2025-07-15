@@ -22,3 +22,8 @@
     font-weight: 300;
     font-size: 14px;
 }
+
+.MovieRating {
+    justify-self: end;
+    width: 100%;
+}
